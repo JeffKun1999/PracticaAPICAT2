@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticaAPICAT2.Views.CatImagePage"
+             Title="CatImagePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="DarkSlateGray">
+                <Label Text="Imagen de Gato Aleatoria"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       TextColor="White"
+                       FontSize="Large"/>
+            </Frame>
+            <Image Source="{Binding ImageUri}"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   Aspect="AspectFit"/>
+            <Button Text="Cargar Imagen Aleatoria"
+                    Command="{Binding LoadRandomCatImageCommand}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
